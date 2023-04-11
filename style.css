@@ -1,0 +1,103 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(150deg, rgb(147, 244, 212), rgb(3, 94, 94));
+  /* background-color: aquamarine; */
+}
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.406);
+}
+.todo-app h2 {
+  color: rgb(1, 65, 67);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+.todo-app h2 img {
+  width: 50px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d2d0d0;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: rgb(169, 168, 166);
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 16px;
+}
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 12px 12px 50px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  user-select: none;
+}
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url('./img/uncheck.png');
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+  padding-bottom: 12px;
+}
+
+ul li.checked::before {
+  background-image: url('./img/checked.png');
+}
+.trash-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.trash-icon:hover,
+.trash-icon:active {
+  width: 30px;
+  height: 30px;
+}
