@@ -25,8 +25,7 @@ listContainer.addEventListener(
       e.target.parentElement.remove();
       saveDate();
     }
-  },
-  false
+  }
 );
 
 function saveDate() {
